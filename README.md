@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Applytlogo-removebg-preview.png" alt="Applyt Logo" width="220"/>
+<img src="Applytlogo.png" alt="Applyt Logo" width="220"/>
 
 # Applyt — AI Career Toolkit
 
