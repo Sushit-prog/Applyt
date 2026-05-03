@@ -1,13 +1,18 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 import streamlit as st
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.prompts import PromptTemplate
-import tempfile, os, json
+import tempfile, json
 
 # --- CONFIG ---
-chat = ChatGroq(
-    model="meta-llama/llama-4-scout-17b-16e-instruct",
-    GROQ_API_KEY="API_KEY"
+chat = ChatOpenAI(
+    model="meta-llama/llama-4-scout",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1"
 )
 
 # --- PROMPT ---
